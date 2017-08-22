@@ -1,0 +1,18 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.oluwaseyi.catholicprayerguide.About">
+
+    <item android:id="@+id/action_about"
+        android:title="@string/about"
+        android:orderInCategory="90"
+        app:showAsAction="never" />
+
+    <item android:id="@+id/action_share"
+        android:title="@string/action_share"
+        android:orderInCategory="200"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_menu_share"
+         />
+
+</menu>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.oluwaseyi.catholicprayerguide" >
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/PrayerGuideTheme" >
+        <activity
+            android:name=".SplashScreen"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:icon="@drawable/ic_launcher"
+            android:name=".MainActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".Basicprayers"
+            android:label="@string/title_activity_basicprayers"
+            android:parentActivityName=".Prayer" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.oluwaseyi.catholicprayerguide.MainActivity" />
+        </activity>
+        <activity
+            android:name=".PrayertoJesus"
+            android:label="@string/title_activity_prayerto_jesus"
+            android:parentActivityName=".Prayer" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.oluwaseyi.catholicprayerguide.MainActivity" />
+        </activity>
+        <activity
+            android:name=".Marianprayers"
+            android:label="@string/title_activity_marianprayers"
+            android:parentActivityName=".Prayer" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.oluwaseyi.catholicprayerguide.MainActivity" />
+        </activity>
+        <activity
+            android:name=".Prayerofthesaint"
+            android:label="@string/title_activity_prayerofthesaints"
+            android:parentActivityName=".Prayer" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.oluwaseyi.catholicprayerguide.MainActivity" />
+        </activity>
+        <activity
+            android:name=".Otherprayer"
+            android:label="@string/title_activity_otherprayer"
+            android:parentActivityName=".Prayer" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.oluwaseyi.catholicprayerguide.MainActivity" />
+        </activity>
+        <activity
+            android:name=".Prayer"
+            android:label="@string/title_activity_prayer"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.oluwaseyi.catholicprayerguide.MainActivity" />
+        </activity>
+        <activity
+            android:name=".About"
+            android:label="@string/title_activity_about"
+            android:parentActivityName=".Prayer" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.oluwaseyi.catholicprayerguide.MainActivity" />
+        </activity>
+    </application>
+
+</manifest>

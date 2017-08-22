@@ -1,0 +1,184 @@
+<html>
+<head>
+<title>gradlew</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.ln { color: rgb(0,0,0); font-weight: normal; font-style: normal; }
+.s0 { }
+</style>
+</head>
+<BODY BGCOLOR="#ffffff">
+<TABLE CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#C0C0C0" >
+<TR><TD><CENTER>
+<FONT FACE="Arial, Helvetica" COLOR="#000000">
+gradlew</FONT>
+</center></TD></TR></TABLE>
+<pre>
+
+<a name="l1"><span class="ln">1    </span></a><span class="s0">#!/usr/bin/env bash 
+<a name="l2"><span class="ln">2    </span></a> 
+<a name="l3"><span class="ln">3    </span></a>############################################################################## 
+<a name="l4"><span class="ln">4    </span></a>## 
+<a name="l5"><span class="ln">5    </span></a>##  Gradle start up script for UN*X 
+<a name="l6"><span class="ln">6    </span></a>## 
+<a name="l7"><span class="ln">7    </span></a>############################################################################## 
+<a name="l8"><span class="ln">8    </span></a> 
+<a name="l9"><span class="ln">9    </span></a># Add default JVM options here. You can also use JAVA_OPTS and GRADLE_OPTS to pass JVM options to this script. 
+<a name="l10"><span class="ln">10   </span></a>DEFAULT_JVM_OPTS=&quot;&quot; 
+<a name="l11"><span class="ln">11   </span></a> 
+<a name="l12"><span class="ln">12   </span></a>APP_NAME=&quot;Gradle&quot; 
+<a name="l13"><span class="ln">13   </span></a>APP_BASE_NAME=`basename &quot;$0&quot;` 
+<a name="l14"><span class="ln">14   </span></a> 
+<a name="l15"><span class="ln">15   </span></a># Use the maximum available, or set MAX_FD != -1 to use that value. 
+<a name="l16"><span class="ln">16   </span></a>MAX_FD=&quot;maximum&quot; 
+<a name="l17"><span class="ln">17   </span></a> 
+<a name="l18"><span class="ln">18   </span></a>warn ( ) { 
+<a name="l19"><span class="ln">19   </span></a>    echo &quot;$*&quot; 
+<a name="l20"><span class="ln">20   </span></a>} 
+<a name="l21"><span class="ln">21   </span></a> 
+<a name="l22"><span class="ln">22   </span></a>die ( ) { 
+<a name="l23"><span class="ln">23   </span></a>    echo 
+<a name="l24"><span class="ln">24   </span></a>    echo &quot;$*&quot; 
+<a name="l25"><span class="ln">25   </span></a>    echo 
+<a name="l26"><span class="ln">26   </span></a>    exit 1 
+<a name="l27"><span class="ln">27   </span></a>} 
+<a name="l28"><span class="ln">28   </span></a> 
+<a name="l29"><span class="ln">29   </span></a># OS specific support (must be 'true' or 'false'). 
+<a name="l30"><span class="ln">30   </span></a>cygwin=false 
+<a name="l31"><span class="ln">31   </span></a>msys=false 
+<a name="l32"><span class="ln">32   </span></a>darwin=false 
+<a name="l33"><span class="ln">33   </span></a>case &quot;`uname`&quot; in 
+<a name="l34"><span class="ln">34   </span></a>  CYGWIN* ) 
+<a name="l35"><span class="ln">35   </span></a>    cygwin=true 
+<a name="l36"><span class="ln">36   </span></a>    ;; 
+<a name="l37"><span class="ln">37   </span></a>  Darwin* ) 
+<a name="l38"><span class="ln">38   </span></a>    darwin=true 
+<a name="l39"><span class="ln">39   </span></a>    ;; 
+<a name="l40"><span class="ln">40   </span></a>  MINGW* ) 
+<a name="l41"><span class="ln">41   </span></a>    msys=true 
+<a name="l42"><span class="ln">42   </span></a>    ;; 
+<a name="l43"><span class="ln">43   </span></a>esac 
+<a name="l44"><span class="ln">44   </span></a> 
+<a name="l45"><span class="ln">45   </span></a># For Cygwin, ensure paths are in UNIX format before anything is touched. 
+<a name="l46"><span class="ln">46   </span></a>if $cygwin ; then 
+<a name="l47"><span class="ln">47   </span></a>    [ -n &quot;$JAVA_HOME&quot; ] &amp;&amp; JAVA_HOME=`cygpath --unix &quot;$JAVA_HOME&quot;` 
+<a name="l48"><span class="ln">48   </span></a>fi 
+<a name="l49"><span class="ln">49   </span></a> 
+<a name="l50"><span class="ln">50   </span></a># Attempt to set APP_HOME 
+<a name="l51"><span class="ln">51   </span></a># Resolve links: $0 may be a link 
+<a name="l52"><span class="ln">52   </span></a>PRG=&quot;$0&quot; 
+<a name="l53"><span class="ln">53   </span></a># Need this for relative symlinks. 
+<a name="l54"><span class="ln">54   </span></a>while [ -h &quot;$PRG&quot; ] ; do 
+<a name="l55"><span class="ln">55   </span></a>    ls=`ls -ld &quot;$PRG&quot;` 
+<a name="l56"><span class="ln">56   </span></a>    link=`expr &quot;$ls&quot; : '.*-&gt; \(.*\)$'` 
+<a name="l57"><span class="ln">57   </span></a>    if expr &quot;$link&quot; : '/.*' &gt; /dev/null; then 
+<a name="l58"><span class="ln">58   </span></a>        PRG=&quot;$link&quot; 
+<a name="l59"><span class="ln">59   </span></a>    else 
+<a name="l60"><span class="ln">60   </span></a>        PRG=`dirname &quot;$PRG&quot;`&quot;/$link&quot; 
+<a name="l61"><span class="ln">61   </span></a>    fi 
+<a name="l62"><span class="ln">62   </span></a>done 
+<a name="l63"><span class="ln">63   </span></a>SAVED=&quot;`pwd`&quot; 
+<a name="l64"><span class="ln">64   </span></a>cd &quot;`dirname \&quot;$PRG\&quot;`/&quot; &gt;&amp;- 
+<a name="l65"><span class="ln">65   </span></a>APP_HOME=&quot;`pwd -P`&quot; 
+<a name="l66"><span class="ln">66   </span></a>cd &quot;$SAVED&quot; &gt;&amp;- 
+<a name="l67"><span class="ln">67   </span></a> 
+<a name="l68"><span class="ln">68   </span></a>CLASSPATH=$APP_HOME/gradle/wrapper/gradle-wrapper.jar 
+<a name="l69"><span class="ln">69   </span></a> 
+<a name="l70"><span class="ln">70   </span></a># Determine the Java command to use to start the JVM. 
+<a name="l71"><span class="ln">71   </span></a>if [ -n &quot;$JAVA_HOME&quot; ] ; then 
+<a name="l72"><span class="ln">72   </span></a>    if [ -x &quot;$JAVA_HOME/jre/sh/java&quot; ] ; then 
+<a name="l73"><span class="ln">73   </span></a>        # IBM's JDK on AIX uses strange locations for the executables 
+<a name="l74"><span class="ln">74   </span></a>        JAVACMD=&quot;$JAVA_HOME/jre/sh/java&quot; 
+<a name="l75"><span class="ln">75   </span></a>    else 
+<a name="l76"><span class="ln">76   </span></a>        JAVACMD=&quot;$JAVA_HOME/bin/java&quot; 
+<a name="l77"><span class="ln">77   </span></a>    fi 
+<a name="l78"><span class="ln">78   </span></a>    if [ ! -x &quot;$JAVACMD&quot; ] ; then 
+<a name="l79"><span class="ln">79   </span></a>        die &quot;ERROR: JAVA_HOME is set to an invalid directory: $JAVA_HOME 
+<a name="l80"><span class="ln">80   </span></a> 
+<a name="l81"><span class="ln">81   </span></a>Please set the JAVA_HOME variable in your environment to match the 
+<a name="l82"><span class="ln">82   </span></a>location of your Java installation.&quot; 
+<a name="l83"><span class="ln">83   </span></a>    fi 
+<a name="l84"><span class="ln">84   </span></a>else 
+<a name="l85"><span class="ln">85   </span></a>    JAVACMD=&quot;java&quot; 
+<a name="l86"><span class="ln">86   </span></a>    which java &gt;/dev/null 2&gt;&amp;1 || die &quot;ERROR: JAVA_HOME is not set and no 'java' command could be found in your PATH. 
+<a name="l87"><span class="ln">87   </span></a> 
+<a name="l88"><span class="ln">88   </span></a>Please set the JAVA_HOME variable in your environment to match the 
+<a name="l89"><span class="ln">89   </span></a>location of your Java installation.&quot; 
+<a name="l90"><span class="ln">90   </span></a>fi 
+<a name="l91"><span class="ln">91   </span></a> 
+<a name="l92"><span class="ln">92   </span></a># Increase the maximum file descriptors if we can. 
+<a name="l93"><span class="ln">93   </span></a>if [ &quot;$cygwin&quot; = &quot;false&quot; -a &quot;$darwin&quot; = &quot;false&quot; ] ; then 
+<a name="l94"><span class="ln">94   </span></a>    MAX_FD_LIMIT=`ulimit -H -n` 
+<a name="l95"><span class="ln">95   </span></a>    if [ $? -eq 0 ] ; then 
+<a name="l96"><span class="ln">96   </span></a>        if [ &quot;$MAX_FD&quot; = &quot;maximum&quot; -o &quot;$MAX_FD&quot; = &quot;max&quot; ] ; then 
+<a name="l97"><span class="ln">97   </span></a>            MAX_FD=&quot;$MAX_FD_LIMIT&quot; 
+<a name="l98"><span class="ln">98   </span></a>        fi 
+<a name="l99"><span class="ln">99   </span></a>        ulimit -n $MAX_FD 
+<a name="l100"><span class="ln">100  </span></a>        if [ $? -ne 0 ] ; then 
+<a name="l101"><span class="ln">101  </span></a>            warn &quot;Could not set maximum file descriptor limit: $MAX_FD&quot; 
+<a name="l102"><span class="ln">102  </span></a>        fi 
+<a name="l103"><span class="ln">103  </span></a>    else 
+<a name="l104"><span class="ln">104  </span></a>        warn &quot;Could not query maximum file descriptor limit: $MAX_FD_LIMIT&quot; 
+<a name="l105"><span class="ln">105  </span></a>    fi 
+<a name="l106"><span class="ln">106  </span></a>fi 
+<a name="l107"><span class="ln">107  </span></a> 
+<a name="l108"><span class="ln">108  </span></a># For Darwin, add options to specify how the application appears in the dock 
+<a name="l109"><span class="ln">109  </span></a>if $darwin; then 
+<a name="l110"><span class="ln">110  </span></a>    GRADLE_OPTS=&quot;$GRADLE_OPTS \&quot;-Xdock:name=$APP_NAME\&quot; \&quot;-Xdock:icon=$APP_HOME/media/gradle.icns\&quot;&quot; 
+<a name="l111"><span class="ln">111  </span></a>fi 
+<a name="l112"><span class="ln">112  </span></a> 
+<a name="l113"><span class="ln">113  </span></a># For Cygwin, switch paths to Windows format before running java 
+<a name="l114"><span class="ln">114  </span></a>if $cygwin ; then 
+<a name="l115"><span class="ln">115  </span></a>    APP_HOME=`cygpath --path --mixed &quot;$APP_HOME&quot;` 
+<a name="l116"><span class="ln">116  </span></a>    CLASSPATH=`cygpath --path --mixed &quot;$CLASSPATH&quot;` 
+<a name="l117"><span class="ln">117  </span></a> 
+<a name="l118"><span class="ln">118  </span></a>    # We build the pattern for arguments to be converted via cygpath 
+<a name="l119"><span class="ln">119  </span></a>    ROOTDIRSRAW=`find -L / -maxdepth 1 -mindepth 1 -type d 2&gt;/dev/null` 
+<a name="l120"><span class="ln">120  </span></a>    SEP=&quot;&quot; 
+<a name="l121"><span class="ln">121  </span></a>    for dir in $ROOTDIRSRAW ; do 
+<a name="l122"><span class="ln">122  </span></a>        ROOTDIRS=&quot;$ROOTDIRS$SEP$dir&quot; 
+<a name="l123"><span class="ln">123  </span></a>        SEP=&quot;|&quot; 
+<a name="l124"><span class="ln">124  </span></a>    done 
+<a name="l125"><span class="ln">125  </span></a>    OURCYGPATTERN=&quot;(^($ROOTDIRS))&quot; 
+<a name="l126"><span class="ln">126  </span></a>    # Add a user-defined pattern to the cygpath arguments 
+<a name="l127"><span class="ln">127  </span></a>    if [ &quot;$GRADLE_CYGPATTERN&quot; != &quot;&quot; ] ; then 
+<a name="l128"><span class="ln">128  </span></a>        OURCYGPATTERN=&quot;$OURCYGPATTERN|($GRADLE_CYGPATTERN)&quot; 
+<a name="l129"><span class="ln">129  </span></a>    fi 
+<a name="l130"><span class="ln">130  </span></a>    # Now convert the arguments - kludge to limit ourselves to /bin/sh 
+<a name="l131"><span class="ln">131  </span></a>    i=0 
+<a name="l132"><span class="ln">132  </span></a>    for arg in &quot;$@&quot; ; do 
+<a name="l133"><span class="ln">133  </span></a>        CHECK=`echo &quot;$arg&quot;|egrep -c &quot;$OURCYGPATTERN&quot; -` 
+<a name="l134"><span class="ln">134  </span></a>        CHECK2=`echo &quot;$arg&quot;|egrep -c &quot;^-&quot;`                                 ### Determine if an option 
+<a name="l135"><span class="ln">135  </span></a> 
+<a name="l136"><span class="ln">136  </span></a>        if [ $CHECK -ne 0 ] &amp;&amp; [ $CHECK2 -eq 0 ] ; then                    ### Added a condition 
+<a name="l137"><span class="ln">137  </span></a>            eval `echo args$i`=`cygpath --path --ignore --mixed &quot;$arg&quot;` 
+<a name="l138"><span class="ln">138  </span></a>        else 
+<a name="l139"><span class="ln">139  </span></a>            eval `echo args$i`=&quot;\&quot;$arg\&quot;&quot; 
+<a name="l140"><span class="ln">140  </span></a>        fi 
+<a name="l141"><span class="ln">141  </span></a>        i=$((i+1)) 
+<a name="l142"><span class="ln">142  </span></a>    done 
+<a name="l143"><span class="ln">143  </span></a>    case $i in 
+<a name="l144"><span class="ln">144  </span></a>        (0) set -- ;; 
+<a name="l145"><span class="ln">145  </span></a>        (1) set -- &quot;$args0&quot; ;; 
+<a name="l146"><span class="ln">146  </span></a>        (2) set -- &quot;$args0&quot; &quot;$args1&quot; ;; 
+<a name="l147"><span class="ln">147  </span></a>        (3) set -- &quot;$args0&quot; &quot;$args1&quot; &quot;$args2&quot; ;; 
+<a name="l148"><span class="ln">148  </span></a>        (4) set -- &quot;$args0&quot; &quot;$args1&quot; &quot;$args2&quot; &quot;$args3&quot; ;; 
+<a name="l149"><span class="ln">149  </span></a>        (5) set -- &quot;$args0&quot; &quot;$args1&quot; &quot;$args2&quot; &quot;$args3&quot; &quot;$args4&quot; ;; 
+<a name="l150"><span class="ln">150  </span></a>        (6) set -- &quot;$args0&quot; &quot;$args1&quot; &quot;$args2&quot; &quot;$args3&quot; &quot;$args4&quot; &quot;$args5&quot; ;; 
+<a name="l151"><span class="ln">151  </span></a>        (7) set -- &quot;$args0&quot; &quot;$args1&quot; &quot;$args2&quot; &quot;$args3&quot; &quot;$args4&quot; &quot;$args5&quot; &quot;$args6&quot; ;; 
+<a name="l152"><span class="ln">152  </span></a>        (8) set -- &quot;$args0&quot; &quot;$args1&quot; &quot;$args2&quot; &quot;$args3&quot; &quot;$args4&quot; &quot;$args5&quot; &quot;$args6&quot; &quot;$args7&quot; ;; 
+<a name="l153"><span class="ln">153  </span></a>        (9) set -- &quot;$args0&quot; &quot;$args1&quot; &quot;$args2&quot; &quot;$args3&quot; &quot;$args4&quot; &quot;$args5&quot; &quot;$args6&quot; &quot;$args7&quot; &quot;$args8&quot; ;; 
+<a name="l154"><span class="ln">154  </span></a>    esac 
+<a name="l155"><span class="ln">155  </span></a>fi 
+<a name="l156"><span class="ln">156  </span></a> 
+<a name="l157"><span class="ln">157  </span></a># Split up the JVM_OPTS And GRADLE_OPTS values into an array, following the shell quoting and substitution rules 
+<a name="l158"><span class="ln">158  </span></a>function splitJvmOpts() { 
+<a name="l159"><span class="ln">159  </span></a>    JVM_OPTS=(&quot;$@&quot;) 
+<a name="l160"><span class="ln">160  </span></a>} 
+<a name="l161"><span class="ln">161  </span></a>eval splitJvmOpts $DEFAULT_JVM_OPTS $JAVA_OPTS $GRADLE_OPTS 
+<a name="l162"><span class="ln">162  </span></a>JVM_OPTS[${#JVM_OPTS[*]}]=&quot;-Dorg.gradle.appname=$APP_BASE_NAME&quot; 
+<a name="l163"><span class="ln">163  </span></a> 
+<a name="l164"><span class="ln">164  </span></a>exec &quot;$JAVACMD&quot; &quot;${JVM_OPTS[@]}&quot; -classpath &quot;$CLASSPATH&quot; org.gradle.wrapper.GradleWrapperMain &quot;$@&quot; 
+<a name="l165"><span class="ln">165  </span></a></span></pre>
+</body>
+</html>

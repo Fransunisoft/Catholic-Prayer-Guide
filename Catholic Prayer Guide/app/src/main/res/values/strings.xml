@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Catholic Prayer Guide</string>
+    <string name="hello_world">Hello world, splash</string>
+    <string name="prayer_guide">Prayer Guide</string>
+    <string name="refresh">Refresh</string>
+    <string name="about">About</string>
+    <string name="action_share">Share</string>
+    <string name="details">Catholic Prayer guide is an app that will teach and help the Catholic members in prayer and for those who are willing to join Catholic Church. </string>
+    <string name="sugestions">For complains and suggestions </string>
+    <string name="email">oluwaseyiayodele18@gmail.com</string>
+    <string name="bbm">52C3CF14</string>
+    <string name="whatsap">+2348130706942</string>
+    <string name="copyright">© Unisoft.com 2015. All rights reserved</string>
+    <string name="version">Catholic Prayer Guide v1.1</string>
+    <string name="basic_prayers">BASIC PRAYERS</string>
+    <string name="jesus_prayer">PRAYER TO JESUS</string>
+    <string name="marian_prayers">MARIAN PRAYERS</string>
+    <string name="saints_prayer">PRAYER OF THE SAINTS</string>
+    <string name="other_prayers">OTHER PRAYERS</string>
+    <string name="title_activity_basicprayers">BASIC PRAYERS</string>
+    <string name="title_activity_prayerto_jesus">PRAYER TO JESUS</string>
+    <string name="title_activity_marianprayers">MARIAN PRAYERS</string>
+    <string name="title_activity_prayerofthesaints">PRAYER OF THE SAINTS</string>
+    <string name="title_activity_otherprayer">OTHER PRAYERS</string>
+    <string name="title_activity_prayerofthesaint">PRAYER OF THE SAINTS</string>
+    <string name="title_activity_detail">DetailActivity</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_splash">Splash</string>
+    <string name="title_activity_database">Database</string>
+    <string name="title_activity_prayer">Prayer</string>
+    <string name="title_activity_about">About</string>
+    <string name="title_activity_share">Share</string>
+
+</resources>

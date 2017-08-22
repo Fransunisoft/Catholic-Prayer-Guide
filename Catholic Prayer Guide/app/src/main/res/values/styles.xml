@@ -1,0 +1,19 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="PrayerGuideTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="actionBarStyle">@style/ActionBar.Solid.PrayerGuide</item>
+        <item name="android:textColor">#ffff090b</item>
+    </style>
+
+    <style name="splashScreenTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:windowBackground">@drawable/splash_image</item>
+    </style>
+
+    <style name="ActionBar.Solid.PrayerGuide"
+        parent="@style/Widget.AppCompat.Light.ActionBar.Solid.Inverse">
+        <item name="background">@color/Red</item>
+        </style>
+
+</resources>

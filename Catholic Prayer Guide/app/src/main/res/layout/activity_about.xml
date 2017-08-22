@@ -1,0 +1,170 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:background="#fff"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.oluwaseyi.catholicprayerguide.About">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:background="#fff"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/txtPrayerIcon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="2dp"
+            android:maxHeight="300dip"
+            android:maxWidth="250dip"
+            android:src="@drawable/splash_image" />
+
+        <TextView
+            android:id="@+id/txt2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/txtPrayerIcon"
+            android:layout_marginTop="15dp"
+            android:gravity="bottom"
+            android:text="@string/version"
+            android:textSize="18sp" />
+
+
+        <TextView
+            android:id="@+id/details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt2"
+            android:layout_marginTop="15dp"
+            android:fontFamily="arial"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="@string/details"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/details"
+            android:layout_marginTop="30dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/sugestions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="arial"
+                android:padding="5dp"
+                android:text="@string/sugestions"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/email_icon"
+                    android:layout_marginTop="2dp"
+                    android:layout_gravity="center"
+                    android:id="@+id/newtxt1"
+                    android:maxHeight="300dip"
+                    android:maxWidth="250dip" />
+
+
+                <TextView
+                    android:id="@+id/email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/contactus"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="arial"
+                    android:padding="5dp"
+                    android:text="@string/email"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/bbm_icon"
+                    android:layout_marginTop="2dp"
+                    android:layout_gravity="center"
+                    android:id="@+id/newtxt2"
+                    android:maxHeight="300dip"
+                    android:maxWidth="250dip" />
+
+
+                <TextView
+                    android:id="@+id/bbm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/email"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="arial"
+                    android:padding="5dp"
+                    android:text="@string/bbm"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/whatsapp_icon"
+                    android:layout_marginTop="2dp"
+                    android:layout_gravity="center"
+                    android:id="@+id/newtxt3"
+                    android:maxHeight="300dip"
+                    android:maxWidth="250dip" />
+
+
+                <TextView
+                    android:id="@+id/whatsap"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/email"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="arial"
+                    android:padding="5dp"
+                    android:text="@string/whatsap"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+            <TextView
+                android:id="@+id/copyright"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/email"
+                android:layout_marginTop="15dp"
+                android:fontFamily="arial"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="@string/copyright"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </RelativeLayout>
+</ScrollView>
